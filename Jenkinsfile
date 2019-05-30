@@ -4,9 +4,6 @@ node {
 
     env.DOCKER_API_VERSION="1.23"
     
-    sh "git rev-parse --short HEAD > commit-id"
-
-    tag = readFile('commit-id').replace("\n", "").replace("\r", "")
     appName = "frontend"
     imageName = "kavisuresh/employee:latest"
     env.BUILDIMG=imageName
