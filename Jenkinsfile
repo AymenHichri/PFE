@@ -19,3 +19,4 @@ node {
     stage "Deploy"
 
         kubernetesDeploy configs: "*.yaml", kubeconfigId: 'aymen_kubeconfig'
+}
