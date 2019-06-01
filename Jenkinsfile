@@ -2,11 +2,6 @@ node {
 
     checkout scm
 
-    env.DOCKER_API_VERSION="1.23"
-    
-    appName = "frontend"
-    imageName = "kavisuresh/employee:latest"
-    env.BUILDIMG=imageName
 
   stage('Build image') {
     
