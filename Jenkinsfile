@@ -1,7 +1,7 @@
 node {
  
     environment {
-    registry = "aymen2310"
+    registry = "aymen2310/employee"
     registryCredential = ‘dockerhub’
 }
     
