@@ -1,5 +1,9 @@
 node {
-
+ 
+    environment {
+    registry = "aymen2310"
+    registryCredential = ‘dockerhub’
+}
     
     checkout scm
     
