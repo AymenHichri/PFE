@@ -10,6 +10,6 @@ spec:
      spec:
        containers:
        - name: frontend
-         image: kavisuresh/employee
+         image: aymen2310/employee
          ports:
          - containerPort: 8888
