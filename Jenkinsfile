@@ -13,7 +13,7 @@ node {
   stage('Build image') {
       
       
-      sh "docker build  -f Dockerfile -t kavisuresh/employee"
+      sh "docker build -t kavisuresh/employee ."
       
   }
 
