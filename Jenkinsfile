@@ -13,13 +13,13 @@ node {
   stage('Build image') {
       
       
-      sh "docker build -t kavisuresh/employee ."
+      sh "docker build -t employee ."
       
   }
 
 
       stage('Push image') {
-       sh "docker push kavisuresh/employee "
+       sh "docker push aymen2310/employee "
       }
 
           stage "Deploy"{
