@@ -17,14 +17,7 @@ node {
   }
 
 
-      stage('Push image') {
-       
-       docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
-       }
-
-       
-      }
-
+  
           stage "Deploy"{
 
         kubernetesDeploy configs: "*.yaml", kubeconfigId: 'aymen_kubeconfig'
