@@ -12,8 +12,7 @@ node {
 
   stage('Build image') {
       
-      
-      sh "docker build -t aymen2310/employee ."
+      def customimage= docker.build("aymen2310/employee:${env.BUILD_TAG}", '.')
       
   }
 
@@ -21,8 +20,10 @@ node {
       stage('Push image') {
        
        docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
-        }
-       sh "docker push aymen2310/employee "
+       customImage.push()
+       }
+
+       
       }
 
           stage "Deploy"{
