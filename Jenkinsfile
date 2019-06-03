@@ -1,10 +1,6 @@
 node {
  
-    environment {
-    registry = "aymen2310/employee"
-    registryCredential = ‘dockerhub’
-}
-    
+   
     checkout scm
     
     stage('Initialize'){
@@ -24,7 +20,7 @@ node {
 
       stage('Push image') {
        
-       docker.withRegistry('https://registry.hub.docker.com', 'docker') {
+       docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
       sh "docker push aymen2310/employee "
         }
       
