@@ -15,7 +15,7 @@ node {
        sh "docker build -t aymen2310/employee ."
       
   }
-    stage('Docker login') {
+    stage('Push image') {
        
      docker.withRegistry('https://registry.hub.docker.com', 'dockerhub'){
        aymen2310/employee.push()
