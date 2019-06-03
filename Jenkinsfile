@@ -17,14 +17,11 @@ node {
   }
     stage('Docker login') {
        
-       docker.withRegistry('https://registry.hub.docker.com', 'dockerhub')
-    
+     docker.withRegistry('https://registry.hub.docker.com', 'dockerhub'){
+       aymen2310/employee.push()
+     }
       }
- 
- stage ('Push'){
 
- sh "docker push aymen2310/employee"   
- }
 
 
           stage "Deploy"{
