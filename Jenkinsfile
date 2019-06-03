@@ -21,9 +21,8 @@ node {
       stage('Push image') {
        
        docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
-      sh "docker push aymen2310/employee "
         }
-      
+       sh "docker push aymen2310/employee "
       }
 
           stage "Deploy"{
