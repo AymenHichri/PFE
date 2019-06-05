@@ -14,7 +14,7 @@ app = sh "docker build -t aymen2310/employee ."
 } 
 stage('Push image') 
 {
- docker.withRegistry('https://registry.hub.docker.com', 'dockerhub')
+ docker.withRegistry('https://registry.hub.docker.com', 'dockerhub', url: "" )
 {
            app.push("${env.BUILD_NUMBER}")
             app.push("latest")
