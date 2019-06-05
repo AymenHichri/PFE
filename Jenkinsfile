@@ -1,7 +1,6 @@
 node { 
  
- def app
- checkout scm  
+checkout scm  
  
 stage('Initialize') 
 { 
@@ -10,16 +9,13 @@ stage('Initialize')
 } 
 stage('Build image') 
 { 
-app = sh "docker build -t aymen2310/employee ." 
+sh "docker build -t aymen2310/employee ." 
 } 
 stage('Push image') 
 {
- docker.withRegistry('https://registry.hub.docker.com', 'dockerhub', url: "" )
-{
-           app.push("${env.BUILD_NUMBER}")
-            app.push("latest")
+          sh "docker push aymen2310/employee" 
 } 
-}
+
  stage ("Deploy")
 {
  kubernetesDeploy configs: "*.yaml", kubeconfigId: 'aymen_kubeconfig' 
