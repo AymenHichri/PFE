@@ -1,11 +1,11 @@
-node 
-{ 
+node { 
 
+ checkout scm  
+ 
 stage('Initialize') 
 { 
- checkout scm 
  def dockerHome = tool 'myDocker' 
-env.PATH = "${dockerHome}/bin:${env.PATH}" 
+ env.PATH = "${dockerHome}/bin:${env.PATH}" 
 } 
 stage('Build image') 
 { 
