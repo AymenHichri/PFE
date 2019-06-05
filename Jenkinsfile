@@ -18,7 +18,7 @@ stage('Push image')
  sh "docker push aymen2310/employee" 
 } 
 }
- stage "Deploy"
+ stage ("Deploy")
 {
  kubernetesDeploy configs: "*.yaml", kubeconfigId: 'aymen_kubeconfig' 
 }
