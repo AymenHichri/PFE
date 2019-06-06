@@ -2,9 +2,14 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
    name: frontend
+   labels:
+    app: frontend
 spec:
    template:
      metadata:
+     labels:
+        app: frontend
+        tier: frontend
      spec:
        containers:
        - name: frontend
