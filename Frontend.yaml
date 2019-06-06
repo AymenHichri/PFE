@@ -5,8 +5,6 @@ metadata:
 spec:
    template:
      metadata:
-       labels:
-         run: frontend
      spec:
        containers:
        - name: frontend
