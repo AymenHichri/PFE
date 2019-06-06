@@ -1,15 +1,16 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-   name: frontend
+   name: frontend2
 spec:
    template:
      metadata:
        labels:
-         name: frontend
+         run: frontend2
      spec:
        containers:
-       - name: frontend
+       - name: frontend2
          image: aymen2310/employee
          ports:
          - containerPort: 8888
+    
