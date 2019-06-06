@@ -11,6 +11,12 @@ stage('Build image')
 { 
 sh "docker build -t aymen2310/employee ." 
 } 
+ 
+ stage ("push")
+ {
+           sh('docker login -u aymen2310 -p 231096')
+            sh('docker push aymen2310/employee')
+ }
 
  stage ("Deploy")
 {
