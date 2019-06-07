@@ -20,6 +20,6 @@ sh "docker build -t aymen2310/employee ."
 
  stage ("Deploy")
 {
- kubernetesDeploy configs: "*.yaml", kubeconfigId: 'aymen-kubeconfig'
+ kubernetesDeploy configs: "*.yaml", kubeconfigId: 'aymen-kubeconfig',enableConfigSubstitution: true
 }
  }
