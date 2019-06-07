@@ -1,4 +1,4 @@
-FROM kavisuresh/employee:latest
+FROM aymen2310/employee:latest
 
 COPY app.js /opt/sample/Employee/app.js
 
