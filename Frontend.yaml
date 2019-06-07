@@ -1,19 +1,20 @@
+--- 
 apiVersion: apps/v1
 kind: Deployment
-metadata:
-   name: frontend
-spec:
-  selector:
-    matchLabels:
-      name: frontend
-  template:
-    metadata:
-      labels:
-        name: frontend
-     spec:
-       containers:
-       - name: frontend
-         image: aymen2310/employee
-         ports:
-         - containerPort: 8888
-    
+metadata: 
+  name: frontend
+spec: 
+  selector: 
+    matchLabels: 
+      app: frontend
+  strategy: Recreate
+  template: 
+    metadata: 
+      labels: 
+        app: frontend
+    spec: 
+      containers: 
+        - image: aymen2310/employee
+          name: frontend
+          ports: 
+            - containerPort: 8888
