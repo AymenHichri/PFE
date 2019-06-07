@@ -6,10 +6,10 @@ spec:
   selector:
     matchLabels:
       name: frontend
-   template:
-     metadata:
-       labels:
-         name: frontend
+  template:
+    metadata:
+      labels:
+        name: frontend
      spec:
        containers:
        - name: frontend
