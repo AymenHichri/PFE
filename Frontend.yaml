@@ -1,12 +1,15 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
    name: frontend
 spec:
+selector:
+    matchLabels:
+      name: frontend
    template:
      metadata:
        labels:
-         run: frontend
+         name: frontend
      spec:
        containers:
        - name: frontend
