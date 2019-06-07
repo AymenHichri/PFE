@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
    name: frontend
 spec:
-selector:
+  selector:
     matchLabels:
       name: frontend
    template:
