@@ -12,9 +12,9 @@ function createHomePage(req,res){
 	res.writeHead(200, {'Content-Type': 'text/html'});
 	res.write("<html>");
 <<<<<<< HEAD
-	res.write("<body style='background-color:red;'> ");
+	res.write("<body style='background-color:black;'> ");
 =======
-	res.write("<body style='background-color:red;'> ");
+	res.write("<body style='background-color:black;'> ");
 >>>>>>> b2d4221eddc66ad4c9aaf12fc43a7c847a07bce9
 	res.write("<center>");
 	res.write("<form name='DisplayForm' method='POST' >");
