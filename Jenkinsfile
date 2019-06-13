@@ -10,7 +10,6 @@ stage('Initialize')
 stage('Build image') 
 { 
 sh "docker build -t aymen2310/employee ." 
-sh "docker-compose up"
 } 
  
  stage ("push")
