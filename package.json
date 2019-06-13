@@ -1,0 +1,16 @@
+{
+  "name": "insert-title-here",
+  "version": "1.0.0",
+  "main": "app.js",
+  "description": "Insert description here",
+  "scripts": {
+	"start": "node app.js"
+	 "start.dev": "nodemon"
+  },
+  "dependencies": {
+    "mongodb": "~2.0"
+  },
+   "devDependencies": {
+    "nodemon": "^1.14.12"
+  }
+}
