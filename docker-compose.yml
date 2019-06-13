@@ -6,7 +6,6 @@ services:
       context: .
       dockerfile: Dockerfile.dev
     volumes:
-      - ./:/PFE/Employee
-      - /PFE/Employee/node_modules # Remove this if you have pure JS dependencies
+      - ./:/PFE/
     ports:
       - "8888:8888"
