@@ -11,7 +11,7 @@ var url = 'mongodb://'+mongo_host+':'+mongo_port+'/employee';
 function createHomePage(req,res){
 	res.writeHead(200, {'Content-Type': 'text/html'});
 	res.write("<html>");
-	res.write("<body style='background-color:black;'> ");
+	res.write("<body style='background-color:blue;'> ");
 	res.write("<center>");
 	res.write("<form name='DisplayForm' method='POST' >");
 	res.write("<legend><center><h1>Employee Information </h1></center></legend>");
